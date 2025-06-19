@@ -1,6 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(120deg, #e0f7fa, #80deea);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,9 +10,9 @@ body {
 .container {
     background: white;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #ccc;
-    width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 400px;
 }
 
 h1 {
@@ -32,15 +32,35 @@ h1 {
 }
 
 button {
-    padding: 10px 15px;
-    background: #28a745;
+    padding: 10px;
+    background: #00796b;
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
 button:hover {
-    background: #218838;
+    background: #004d40;
+}
+
+.filter-section {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.filter-section button {
+    background: #eeeeee;
+    color: #333;
+    margin: 5px 0;
+}
+
+.filter-section .active {
+    background: #00796b;
+    color: white;
 }
 
 ul {
@@ -50,29 +70,54 @@ ul {
 }
 
 li {
-    background: #eee;
+    background: #f9f9f9;
     margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 12px;
+    border-radius: 6px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 li.completed {
     text-decoration: line-through;
-    background: #d4edda;
+    color: #777;
+    background: #c8e6c9;
+}
+
+.task-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.timestamp {
+    font-size: 12px;
+    color: #999;
 }
 
 li button {
-    background: #dc3545;
+    background: #e53935;
     border: none;
     color: white;
     padding: 5px 8px;
     cursor: pointer;
-    font-size: 14px;
+    border-radius: 4px;
 }
 
 li button:hover {
-    background: #c82333;
+    background: #c62828;
 }
